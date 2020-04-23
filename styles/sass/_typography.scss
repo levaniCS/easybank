@@ -1,0 +1,48 @@
+.heading-1 {
+  font-size: 4rem;
+}
+
+.heading-2 {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.heading-4 {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+
+  &:hover {
+    color: lighten($color-blue, 20%);
+  }
+}
+
+.paragraph {
+  color: $color-gray;
+  font-size: 1.4rem;
+
+  &--small {
+    font-size: 1.1rem;
+    color: $color-gray;
+  }
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+  color: $color-white;
+  white-space: nowrap;
+  font-weight: 700;
+  font-family: $font;
+  font-size: 1.4rem;
+  background-image: $linear;
+  padding: 1.5rem 2.5rem;
+  border-radius: 5rem;
+  transition: all 2s ease-out;
+
+  &:hover {
+    background-image: $linear-on-hover;
+  }
+}

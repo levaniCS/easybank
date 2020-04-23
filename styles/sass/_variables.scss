@@ -1,0 +1,36 @@
+// colors
+$color-blue-dark: hsl(233, 26%, 24%);
+$color-green-light: rgb(49, 211, 92);
+$color-blue: hsl(192, 70%, 51%);
+$color-gray: hsl(233, 8%, 62%);
+$color-white-dark: hsl(220, 16%, 96%);
+$color-white: hsl(0, 0%, 100%);
+$color-gray-light: hsl(0, 0%, 97%);
+$linear: linear-gradient(to left, $color-blue, $color-green-light);
+$linear-on-hover: linear-gradient(
+  to left,
+  lighten($color-blue, 20%),
+  rgba($color-green-light, 0.8)
+);
+$transition: all 0.4s ease-out;
+
+// shadows
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.07);
+
+// font
+$font: 'Public Sans', sans-serif;
+
+// BREAKPOINTS
+$bp-large: 1100px;
+$bp-medium: 900px;
+$bp-medium2: 800px;
+
+$bp-mobile: 500px;
+
+// MIXINS
+@mixin grid4x4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
