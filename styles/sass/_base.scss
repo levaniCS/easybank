@@ -35,7 +35,10 @@ body {
     grid-template-rows: repeat(1, min-content) 60vh repeat(3, min-content);
   }
 
+  @media screen and (max-width: $bp-medium2) {
+    grid-template-rows: repeat(1, min-content) 80vh repeat(3, min-content);
+  }
   @media screen and (max-width: $bp-mobile) {
-    grid-template-rows: repeat(1, min-content) 120vh repeat(3, min-content);
+    grid-template-rows: 100vh repeat(3, max-content);
   }
 }

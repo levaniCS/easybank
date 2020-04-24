@@ -19,13 +19,17 @@
   <body>
     <nav class="nav">
       <img alt="logo" src="images/logo.svg" class="logo" />
-      <ul class="nav__list">
-        <li class="item">Home</li>
-        <li class="item">About</li>
-        <li class="item">Contact</li>
-        <li class="item">Blog</li>
-        <li class="item">Careers</li>
-      </ul>
+      <div class="nav__icon"></div>
+      <div class="links-wrapper">
+        <div class="backdrop"></div>
+        <ul class="nav__list">
+          <li class="item">Home</li>
+          <li class="item">About</li>
+          <li class="item">Contact</li>
+          <li class="item">Blog</li>
+          <li class="item">Careers</li>
+        </ul>
+      </div>
       <button class="btn">Request Invite</button>
     </nav>
     <header class="header">
@@ -297,10 +301,18 @@
     </footer>
   </body>
   <script>
-    document.querySelector('.nav__list').addEventListener('click', Expand);
+    const toggleIcon = document.querySelector('.nav__icon');
+    const linksWrapper = document.querySelector('.links-wrapper');
+    const backdrop = document.querySelector('.backdrop');
 
-    function Expand() {
-      document.querySelector('.nav__list').classList.toggle('isExpanded');
-    }
+    toggleIcon.addEventListener('click', () => {
+      linksWrapper.classList.toggle('open');
+      toggleIcon.classList.toggle('rotate');
+    });
+
+    backdrop.addEventListener('click', () => {
+      linksWrapper.classList.remove('open');
+      toggleIcon.classList.remove('rotate');
+    });
   </script>
 </html>
