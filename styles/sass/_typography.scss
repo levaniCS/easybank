@@ -46,4 +46,7 @@
   &:hover {
     background-image: $linear-on-hover;
   }
+  &:focus {
+    outline: none;
+  }
 }
